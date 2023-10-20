@@ -27,7 +27,7 @@ function App() {
           <Route path="/resend-email-confimation/:uid/" element={<EmailResend/>} />
           <Route path="/GuestSignUp" element={<GuestSignUp />} />
           <Route path="/PasswordReset" element={<PasswordReset />} />
-          <Route path="/NewPassword" element={<NewPassword />} />
+          <Route path="/NewPassword/:uid/:token/" element={<NewPassword />} />
         </Routes>
       </Router>
     </>)
