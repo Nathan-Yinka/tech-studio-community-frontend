@@ -160,9 +160,12 @@ const Login = () => {
                     }
                   }}
                 />
-                {errors.password && (
+                <div className="d-flex justify-content-between">
+                {errors.password ? (
                   <p className="error-message">{errors.password}</p>
-                )}
+                ):<div></div>}
+                <Link to={"/PasswordReset"} className="text-decoration-none"> <p className="text-primary text-decoration-none">Forgot Password?</p></Link>
+                </div>
               </div>
 
               <button type="submit" className="btn btn-primary d-block mt-3">
