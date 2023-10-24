@@ -110,7 +110,7 @@ const Login = () => {
     <div className="login d-flex">
       <div className="frame-1 d-none d-lg-flex align-items-center">
         <div className="container d-flex flex-column justify-content-center align-items-center gap-5">
-          <img src={techstudioLogo} alt="" />
+          <Link to={"/"}><img src={techstudioLogo} alt="" /></Link>
           <div className="brand-container">
             <img className="img-fluid w-100" src={brandPicture} alt="" />
           </div>
@@ -125,7 +125,7 @@ const Login = () => {
               <p>Let’s Help You Get Into Your Account.</p>
             </div>
 
-            <form onSubmit={handleSubmit} className="form">
+            <form onSubmit={handleSubmit} className="form shehu-login">
               <div className="login-email d-flex flex-column gap-3">
                 <label htmlFor="email">Email Address</label>
                 <input
@@ -168,7 +168,7 @@ const Login = () => {
                 </div>
               </div>
 
-              <button type="submit" className="btn btn-primary d-block mt-3">
+              <button type="submit" className="btn btn-primary w-100 d-block mt-3">
                 {loading?<Loader/>:<strong>Login</strong>}
               </button>
               <div className="register d-flex gap-2 justify-content-center pt-2">
@@ -182,13 +182,13 @@ const Login = () => {
                 </Link>
               </div>
             </form>
-            <div className="d-flex gap-1 justify-content-center align-items-center mt-2 mb-4">
+            <div className="d-flex gap-1 justify-content-center align-items-center mt-5 mb-4">
               <div>
-                <img className="lineIcon" src={lineIcon} alt="" />
+                <img className="lineIcon shehu-or"  src={lineIcon} alt="" />
               </div>
-              <p className="fw-bold m-0">0R</p>
+              <p className="fw-bold m-0 shehu-or">0R</p>
               <div>
-                <img className="lineIcon" src={lineIcon} alt="" />
+                <img className="lineIcon shehu-or" src={lineIcon} alt="" />
               </div>
             </div>
             <div className="social-icons d-flex justify-content-center gap-3">
