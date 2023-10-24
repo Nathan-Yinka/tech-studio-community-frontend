@@ -9,7 +9,6 @@ import Community from './pages/Community/Community';
 import PostDetails from './pages/postdetails/PostDetails';
 import ProjectList from './pages/ProjectList/ProjectList';
 import Profile from './pages/Profile/ProfileInternalpage';
-import Profile from './pages/Profile/ProfileInternalpage';
 import Edit from './pages/editeProfile/Edit';
 import { useState } from 'react';
 import Login from './component/Login'
