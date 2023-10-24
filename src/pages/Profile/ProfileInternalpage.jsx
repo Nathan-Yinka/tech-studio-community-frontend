@@ -4,7 +4,7 @@ import tech from '../../assets/tech.png'
 import prof4 from '../../assets/prof4.png'
 import { Icon } from '@iconify/react';
 import { Link } from 'react-router-dom';
-import '../profile/profile.css'
+import "./profile.css"
 
 
 const Profile = () => {
