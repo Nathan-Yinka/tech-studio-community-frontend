@@ -11,7 +11,7 @@ const EmailConfimationModal = ({message,status,login,uid}) => {
           <img className="tick" src={tick} alt="" />
         </div>
         <div className="content">
-          <h1 className="heading">{status?'Congratulations!!!':"Opps!!!"}</h1>
+          <h1 className="heading">{status?'Congratulations!!!':"Oops!!!"}</h1>
           <p>
             {message}
           </p>

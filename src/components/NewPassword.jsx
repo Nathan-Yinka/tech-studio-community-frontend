@@ -173,7 +173,7 @@ const NewPassword = () => {
               )}
             </div>
             <button
-              className="btn btn-primary mt-3 col-4"
+              className="btn btn-primary mt-3 col-8 col-md-4"
             >
               {loading?<Loader/>:<strong>Reset Password</strong>}
             </button>

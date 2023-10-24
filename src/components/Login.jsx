@@ -106,7 +106,7 @@ const Login = () => {
 
   return (
     <div className="position-relative">
-      {alert && <Alert message={"Invalid credentials was entered. Try again"}/>}
+      {alert && <Alert message={"Invalid credentials were entered. Try again"}/>}
     <div className="login d-flex">
       <div className="frame-1 d-none d-lg-flex align-items-center">
         <div className="container d-flex flex-column justify-content-center align-items-center gap-5">
