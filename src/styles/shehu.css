@@ -74,9 +74,7 @@ body{
     transform: translateX(-50%);
 }
 
-.sidebar.active #btn{
-    /* left: 90% !important; */
-}
+
 
 .sidebarr ul{
     margin-top: 10px;

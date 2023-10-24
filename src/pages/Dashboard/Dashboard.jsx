@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Sidebar from '../../components/Sidebar'
-import HeaderDashboard from '../../components/HeaderDashboard';
+import Sidebar from '../../component/Sidebar'
+import HeaderDashboard from '../../component/HeaderDashboard';
 import gal from '../../assets/gal.png'
 import gif from '../../assets/gif.png'
 import hero from '../../assets/hero.png'
