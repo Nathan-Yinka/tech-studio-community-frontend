@@ -1,13 +1,14 @@
 .one h1 {
     color: var(--primary);
-    font-family: var(--font-family);
+    font-family: var(--Open-Sans);
     font-size: 40px;
     font-weight: 700;
+
 }
 
 .one p {
     color: var(--secondry);
-    font-family: var(--font-family);
+    font-family: var(--Open-Sans);
     font-size: 16px;
     font-weight: 400;
 }
@@ -19,6 +20,12 @@
     background-color: var(--bg);
 
 }
+.form form{
+    height: 300px;
+    width: 60%;
+}
+.form form,
+.form1 
 .talenter .form form,
 .talenter .form1 {
     display: flex;
@@ -34,9 +41,10 @@
 
 .talenter .form img {
     position: relative;
-    top: -120px;
-    left: 160px;
+    top: -100px;
+    left: 250px;
     z-index: 0 !important;
+    width: 110px;
 }
 
 .talenter .form input,
@@ -46,13 +54,19 @@
     border-radius: 5px;
     border: 1px solid #BABABA;
     height: 40px;
+    font-family: var(--Open-Sans);
+
 }
 
 .talenter .button {
     width: 80%;
     margin: 0 auto;
+    font-family: var(--Open-Sans);
 }
 
+
+
+.btn 
 .talenter .btn {
     width: 100%;
 }
@@ -73,7 +87,7 @@
 
 .talenter .two h1 {
     color: var(--primary);
-    font-family: var(--font-family);
+    font-family: var(--Open-Sans);
     font-size: 20px;
     font-weight: 700;
 }
@@ -91,6 +105,7 @@
     margin-top: 20px;
 }
 
+.two h2 
 .talenter .two h2 {
     border: 2px solid darkblue;
     font-family: Open Sans;
@@ -107,7 +122,7 @@
 
 .talenter .sec21 h1 {
     color: var(--primary);
-    font-family: var(--font-family);
+    font-family: var(--Open-Sans);
     font-size: 32px;
     padding: 10px 0px;
     font-weight: 700
@@ -115,7 +130,7 @@
 
 .talenter .sec21 h2 {
     color: #000;
-    font-family: var(--font-family);
+    font-family: var(--Open-Sans);
     font-size: 24px;
     font-weight: 700;
     padding: 10px 0px;
@@ -123,7 +138,7 @@
 
 .talenter .sec21 p {
     color: var(--Body-Text-Color, #1E1E1E);
-    font-family: var(--font-family);
+    font-family: var(--Open-Sans);
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
@@ -136,14 +151,14 @@
 
 .talenter .text1 h2 {
     color: var(--primary);
-    font-family: var(--font-family);
+    font-family: var(--Open-Sans);
     font-size: 32px;
     font-weight: 700;
 }
 
 .talenter .text1 p {
     color: var(--Body-Text-Color, #1E1E1E);
-    font-family: var(--font-family);
+    font-family: var(--Open-Sans);
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
@@ -153,6 +168,28 @@
 
 @media (min-width:760px) {
 
+    .text{
+        width: 40%;
+        display: flex;
+        justify-self: center;
+        align-items: center;
+    }
+    .text h1{
+        font-size: 1.5rem;
+    }
+    .form {
+        width: 55%;
+        height: 500px;
+    }
+    .form form{
+        width: 80%;
+    }
+
+    .form img {
+        left: 270px;
+        width: 100px;
+        top: -100px;
+    }
     .talenter .text,
     .talenter .form {
         width: 45%;
@@ -171,6 +208,10 @@
         margin: 0 auto;
     }
 
+    
+
+    .text1,
+    .form1 
     .talenter .text1,
     .talenter .form1 {
         width: 40%;
@@ -186,12 +227,20 @@
 @media (min-width:900px) {
     .talenter .form {
         height: 600px;
+        width: 100;
+    }
+    .form form{
+        height: 400px !important;
+    }
+
+    .text h1{
+        font-size: 2.5rem;
     }
 
     .talenter .for {
         width: 70%;
-        height: 300px;
-        margin: 160px auto;
+        height: 400px;
+        margin: 100px auto;
     }
 
     .talenter .for form {
@@ -199,6 +248,11 @@
         margin-top: -14px;
     }
 
+    .form img {
+        left: 430px;
+        top: -209px;
+        width: 180px;
+    }
     .talenter .form img {
         left: 320px;
         top: -245px;
@@ -220,6 +274,15 @@
         line-height: 30px;
     }
 
+    .do {
+        width: 370px;
+        height: 370px;
+    }
+
+    .do p,
+    .do h2 {
+        text-align: start;
+    }
     .talenter .do {
         width: 320px;
         height: 320px;
@@ -233,6 +296,7 @@
         margin: 0 auto;
     }
 
+    .do img 
     .talenter .do img {
         border: 2px solid firebrick;
         text-align: justify;
@@ -249,13 +313,25 @@
         width: 27%;
     }
 
+    .sec21 h2{
+        text-align: start;
+    }
+    
+    .sec21 p {
+        text-align: start;
+        color: var(--Body-Text-Color, #1E1E1E);
+font-family: Open Sans;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 22px;
+    }
     .talenter .sec21 h2,
     .talenter .sec21 p {
         text-align: justify;
     }
 
     .sec21 img {
-        border: 1px solid lawngreen;
         text-align: justify;
         align-items: start;
         margin-left: 0px;
@@ -271,6 +347,8 @@
         margin-left: 40px;
     }
 
+    .sp1 {
+        margin-right: 420px;
     .talenter .sp1 {
         margin-right: 360px;
     }
@@ -282,6 +360,10 @@
         width: 500px;
         text-align: justify;
     }
+
+
+
+   
 }
 
 .error {
@@ -300,4 +382,5 @@
 
 .error::placeholder{
     color: red  !important;
+}
 }

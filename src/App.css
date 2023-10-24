@@ -8,7 +8,6 @@
 box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 :root {
   --primary: #1F2666;
@@ -17,4 +16,33 @@ box-sizing: border-box;
   --secondary: #1E1E1E;
   --Open-Sans: 'Open Sans', sans-serif;
   --black: #292929;
+ --border:#0266f4;
 }
+
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+
+
+.kk{
+  width: 100%;
+  }
+  .kk box-icon{
+  position: relative;
+  width: 15px;
+  left: 25px;
+  color: white;
+  top: 3px;
+  }
+
+
+
+  @media (min-width: 900px) {
+    .kk box-icon{
+      top: 20px !important;
+      width: 30px;
+      left: 33px;
+    }
+  }

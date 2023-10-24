@@ -1,8 +1,15 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import JobRequirements from './pages/JobRequirements'
 import "./App.css";
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Home from './pages/lading page/Home'
 import Talent from './pages/find talent/Talent'
+import Dashboard from './pages/Dashboard/Dashboard';
+import Community from './pages/Community/Community';
+import PostDetails from './pages/postdetails/PostDetails';
+import ProjectList from './pages/ProjectList/ProjectList';
+import Profile from './pages/profile/ProfileInternal';
+import Edit from './pages/editeProfile/Edit';
 import { useState } from 'react';
 import Login from './components/Login'
 import GuestSignUp from "./components/GuestSignUp"
@@ -15,9 +22,18 @@ import InternalPage from './pages/InternalPage';
 function App() {
   const [jobPosterData, SetJobPosterData]= useState({})
   return (
-    <>
+    < >
       <Router>
         <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/talent" element={<Talent />} />
+          <Route path='/dashboard' element={<Dashboard/>}/>
+          <Route path='/community' element={<Community/>}/>
+          <Route path='/postdetails' element={<PostDetails/>}/>
+          <Route path='/projectlist' element={<ProjectList/>}/>
+          <Route path='profile' element={<Profile/>}/>
+          <Route path='/edit' element={<Edit/>}/>
+          <Route path="/profile" element={<Profile/>} />
           <Route path='/' element={<Home/>}/>
           <Route path="/talent" element={<Talent SetJobPosterData={SetJobPosterData}/>} />
           <Route path="/internalpage" element={<InternalPage />} />

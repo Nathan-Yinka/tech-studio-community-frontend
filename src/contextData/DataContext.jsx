@@ -1,9 +1,27 @@
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useContext, useEffect, useState } from 'react'
 
 const AuthContext = createContext();
 
 const DataContext = ({children}) => {
+    const apiURL = "https://techstudiocommunity.onrender.com";
     const [token, setToken] = useState(localStorage.getItem('token') || null);
+    const [communityData, setCommunityData] = useState([]);
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+      fetch(`${apiURL}/api/users/community/`)
+        .then((response) => response.json())
+        .then((result) => {
+          setCommunityData(result);
+        })
+        .catch((error) => {
+          console.log(error);
+          window.location.reload();
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+    }, []);
 
     const login = (userToken) => {
         setToken(userToken);
@@ -19,6 +37,9 @@ const DataContext = ({children}) => {
         token,
         login,
         logout,
+        communityData,
+        loading,
+        apiURL,
     }
 
   return (

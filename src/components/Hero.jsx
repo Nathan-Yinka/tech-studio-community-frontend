@@ -1,10 +1,11 @@
 import React from "react";
-import "../styles/hero.css"
-import HeroImg from "../assets/HeroImage.png"
+import "../styles/hero.css";
+import HeroImg from "../assets/HeroImage.png";
 import { Link } from "react-router-dom";
-
+import { useAuth } from "../contextData/DataContext";
 
 const Hero = () => {
+  const {token} = useAuth()
   return (
     <div className="Container hero-sec mt-5">
       <div>
@@ -18,7 +19,23 @@ const Hero = () => {
           Engage in discussions, collaborate on projects, and build lasting
           relationships that could shape your tech journey.
         </p>
-        <Link to={"/login"}><div type="button" className="btn btn-primary p-2 px-4 fs-5 fw-bold rounded">Join Community</div></Link>
+        { !token ?
+        <Link to={"/login"}>
+          <div
+            type="button"
+            className="btn btn-primary p-2 fs-5 fw-bold rounded mt-5"
+          >
+            Join Community
+          </div>
+        </Link>:
+        <Link to={"/dashboard"}>
+        <div
+            type="button"
+            className="btn btn-primary p-2 fs-5 fw-bold rounded mt-5"
+          >
+            Go To DashBoard
+          </div>
+        </Link>}
       </div>
     </div>
   );
