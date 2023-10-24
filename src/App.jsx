@@ -17,7 +17,7 @@ import PasswordReset from "./components/PasswordReset"
 import NewPassword from "./components/NewPassword"
 import EmailConfirmation from "./pages/EmailConfirmation";
 import EmailResend from "./pages/EmailResend";
-import InternalPage from './pages/InternalPage';
+import InternalPage from "./pages/InternalPage"
 import ProjectUpload from './pages/Projectupload/ProjectUpload';
 
 function App() {
