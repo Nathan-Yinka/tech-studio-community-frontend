@@ -1,8 +1,8 @@
 import './style.css'
-import FindtalentSec1 from '../../components/FindtalentSec1'
-import FindtalentSec2 from '../../components/FindtalentSec2'
-import PublishModal from '../../Components/PublishModal'
-import SubmissionModal from '../../Components/SubmissionModal'
+import FindtalentSec1 from '../../component/FindtalentSec1'
+import FindtalentSec2 from '../../component/FindtalentSec2'
+import PublishModal from '../../component/PublishModal'
+import SubmissionModal from '../../component/SubmissionModal'
 
 const Index = ({SetJobPosterData}) => {
   return (

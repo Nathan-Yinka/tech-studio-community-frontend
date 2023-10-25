@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Sidebar from '../../components/Sidebar'
-import HeaderDashboard from '../../components/HeaderDashboard';
+import Sidebar from '../../component/Sidebar'
+import HeaderDashboard from '../../component/HeaderDashboard';
 import gal from '../../assets/gal.png'
 import gif from '../../assets/gif.png'
 import hero from '../../assets/hero.png'
@@ -13,9 +13,9 @@ import '../Dashboard/dashboard.css'
 import { Link, useNavigate } from "react-router-dom";
 import Heart from 'react-animated-heart'
 import { useAuth } from "../../contextData/DataContext";
-import Alert from "../../components/Alert"
+import Alert from "../../component/Alert"
 import { AlertHeading, AlertLink } from "react-bootstrap";
-import Loader from "../../components/Loader";
+import Loader from "../../component/Loader";
 import ReactPlayer from 'react-player'
 import userIcon from "../../assets/user-128_nathan.png"
 import LoadingPage from "../Loading";
