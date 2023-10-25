@@ -132,3 +132,8 @@ letter-spacing: 0.44px;
     
   }
   
+
+  .no-border:focus {
+    outline: none !important;
+    border: none !important;
+  }

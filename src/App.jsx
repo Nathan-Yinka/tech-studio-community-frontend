@@ -20,23 +20,24 @@ import EmailResend from "./pages/EmailResend";
 import InternalPage from "./pages/InternalPage"
 import ProjectUpload from './pages/Projectupload/ProjectUpload';
 
+import DefaultLayout from "./Layout/DefaultLayout";
+import InternalModal from "./pages/CommunityInternalModal/InternalModal";
+import NotificationModal from "./pages/CommunityInternalModal/NotificationModal";
+
 function App() {
   const [jobPosterData, SetJobPosterData]= useState({})
   return (
     < >
-      <Router>
+    
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/talent" element={<Talent />} />
           <Route path='/dashboard' element={<Dashboard/>}/>
           <Route path='/community' element={<Community/>}/>
-          <Route path='/postdetails' element={<PostDetails/>}/>
+          <Route path='/postdetails/:id' element={<PostDetails/>}/>
           <Route path='/projectlist' element={<ProjectList/>}/>
           <Route path='profile' element={<Profile/>}/>
           <Route path='/edit' element={<Edit/>}/>
           <Route path="/profile" element={<Profile/>} />
-          <Route path='/' element={<Home/>}/>
-          <Route path="/talent" element={<Talent SetJobPosterData={SetJobPosterData}/>} />
+         
           <Route path="/internalpage" element={<InternalPage />} />
           <Route path='/jobrequirement' element={<JobRequirements jobPosterData={jobPosterData}/>} />
           <Route path="/Login" element={<Login />} />
@@ -47,8 +48,16 @@ function App() {
           <Route path="/NewPassword/:uid/:token/" element={<NewPassword />} />
           <Route path="/NewPassword" element={<NewPassword />} />
           <Route path='/projectupload' element={<ProjectUpload/>}/>
+
+
+          <Route element={<DefaultLayout/>}>
+            <Route path="/" element={<Home />} />
+            <Route path="/talent" element={<Talent SetJobPosterData={SetJobPosterData}/>} />
+            <Route path="/internal" element={<InternalModal />} />
+            <Route path="/notification" element={<NotificationModal />} />
+          </Route>
         </Routes>
-      </Router>
+  
     </>)
 }
 

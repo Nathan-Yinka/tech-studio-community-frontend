@@ -23,7 +23,7 @@ const Hero = () => {
         <Link to={"/login"}>
           <div
             type="button"
-            className="btn btn-primary p-2 fs-5 fw-bold rounded mt-5"
+            className="btn btn-primary p-2 fs-5 fw-bold rounded mt-md-5 col-10"
           >
             Join Community
           </div>
@@ -31,7 +31,7 @@ const Hero = () => {
         <Link to={"/dashboard"}>
         <div
             type="button"
-            className="btn btn-primary p-2 fs-5 fw-bold rounded mt-5"
+            className="btn btn-primary p-2 fs-5 fw-bold rounded mt-md-5 col-10"
           >
             Go To DashBoard
           </div>

@@ -8,19 +8,22 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Icon } from '@iconify/react';
 import details from '../assets/details.png'
 import '../styles/headerDashboard.css'
+import useIcon from "../assets/user-128_nathan.png"
+import { useAuth } from "../contextData/DataContext";
 
 
 const HeaderDashboard = () => {
+  const {userDetails,logout} = useAuth()
   return (
-    <div>
+    <div className=" dasherrrr ">
 
-      <Navbar expand="lg" className="   head">
+      <Navbar expand="lg" className="  head">
         <Container>
-          <Navbar.Brand>
-            <Link to="" className="text-decoration-none">
+          <Navbar.Brand className="">
+            <div className="text-decoration-none">
 
               <h1 className="text-white ps-md-4">Dashboard</h1>
-            </Link>
+            </div>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
@@ -40,10 +43,10 @@ const HeaderDashboard = () => {
                      <Icon icon="mdi:bell-notification-outline" color="white" width="40" height="40"  />
                     </Link>
                   </div>
-                  <Link className="text-decoration-none text-white d-flex mt-lg-3 fw-bold tag ms-3   shehu-head-tag">
-                    <img src={details} alt="" /> <p className="px-lg-2 px-1">Wale Ahmed </p> 
-                    <select name="" id=""><option value=""></option>
-                    <option value="">logout</option>
+                  <Link className="text-decoration-none text-white d-flex mt-lg-3 fw-bold tag ms-3  align-items-center  shehu-head-tag">
+                    <img src={userDetails.image?userDetails.image:useIcon} alt="" className="rounded-circle border-black border border-white img-fluid"/> <p className="px-lg-2 px-1 ">{userDetails.full_name && userDetails.full_name } </p> 
+                    <select name="" id="" onChange={logout}><option value=""></option>
+                    <option value={""}>logout</option>
                     </select>
                     
                   </Link>

@@ -7,6 +7,7 @@ import comm from '../assets/comm.png'
 
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { Link } from 'react-router-dom';
 const Sidebar = () => {
 
   const [show, setShow] = useState(false);
@@ -14,7 +15,7 @@ const Sidebar = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <div className='container'>
+    <div className=''>
 
 
       <section>
@@ -25,7 +26,7 @@ const Sidebar = () => {
 
       <Offcanvas show={show} onHide={handleClose} className=' w-75'>
         <Offcanvas.Header closeButton className='shehu-mobile'>
-          <Offcanvas.Title ><img src={logo} alt="" /></Offcanvas.Title>
+          <Link to={"/"}><Offcanvas.Title ><img src={logo} alt="" /></Offcanvas.Title></Link>
         </Offcanvas.Header>
         <Offcanvas.Body className='shehu-mobile '>
         <section className=' text-white'>
@@ -34,14 +35,9 @@ const Sidebar = () => {
               <p> <Icon icon="ic:baseline-dashboard" width="30" height="30" className='icon' /> <span className="mx-1"> Dashboard</span> </p>
             </div>
 
-            <div className='text-center movie  my-2'>
-              <p> <img src={comm} alt="" />  <span className="mx-1 "> <select name="" id="">
-                <option value="">Community</option>
-                <option value="">Developer</option>
-                <option value="">UI/UX</option>
-                <option value="">Data Analyst</option>
-              
-              </select></span> </p>
+            <div className='text-center movie  my-lg-2 my-1'>
+            <p> <img src={comm} alt="" />  <span className="mx-1 ">Community</span></p>
+               
             </div>
 
             <div className='text-center tv  my-2 '>
@@ -70,7 +66,7 @@ const Sidebar = () => {
      
         <section className='sidebar text-white'>
           <div className="img d-flex ">
-            <img src={logo} alt="" />
+            <Link to={"/"}><img src={logo} alt="" /></Link>
           </div>
             
             <div className='text-center hom  my-lg-2 my-1'>
@@ -78,13 +74,8 @@ const Sidebar = () => {
             </div>
 
             <div className='text-center movie  my-lg-2 my-1'>
-            <p> <img src={comm} alt="" />  <span className="mx-1 "> <select name="" id="">
-                <option value="">Community</option>
-                <option value="">Developer</option>
-                <option value="">UI/UX</option>
-                <option value="">Data Analyst</option>
-              
-              </select></span> </p>
+            <p> <img src={comm} alt="" />  <span className="mx-1 ">Community</span></p>
+               
             </div>
 
             <div className='text-center tv  my-lg-2  my-1'>

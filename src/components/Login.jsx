@@ -76,7 +76,7 @@ const Login = () => {
 
         const result = await response.json();
         login(result.token)
-        navigate("/internalpage")
+        navigate("/")
 
       } catch (error) {
 

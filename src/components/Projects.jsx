@@ -20,16 +20,11 @@ const Projects = () => {
   const [filter,setFilter] = useState("")
   const [page,setPage] = useState(1)
   const [pageCount,setPageCount] = useState(1)
-  const itemPerPage = 2
-console.log(token);
-console.log(project)
-  useEffect(()=>{
-    setLoading(loading)
-  },[loading])
+  const itemPerPage = 20
 
   useEffect(() => {
     fetchProject()
-  }, [filter,page]);
+  }, [filter,page,token,loading]);
 
   useEffect(()=>{
     setPage(1)
@@ -38,9 +33,9 @@ console.log(project)
   function fetchProject(){
     setLoading(true)
     const requestOptions = {
-      method: 'GET', // You can change the method as needed (GET, POST, etc.)
+      method: 'GET', 
       headers: {
-        'Authorization': `Bearer ${token}`, // Replace YOUR_TOKEN_HERE with your actual bearer token
+        'Authorization': `Bearer ${token}`, 
       },
     };
   
@@ -66,12 +61,13 @@ console.log(project)
     if (!token){
       navigate("/login")
     }
+    else{
     var formdata = new FormData();
-formdata.append("feed_id", id);
+    formdata.append("feed_id", id);
     const requestOptions = {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${token}`, // Replace YOUR_TOKEN_HERE with your actual bearer token
+        'Authorization': `Bearer ${token}`,
       },
       body: formdata,
       
@@ -95,12 +91,11 @@ formdata.append("feed_id", id);
           });
           return updatedProjects;
         });
-        setLoading(false);
       })
       .catch((error) => {
         setError(error.message);
-        setLoading(false);
       });
+    }
   }
   
   
@@ -114,12 +109,13 @@ formdata.append("feed_id", id);
   }
   return (
     <>
-    {!loading2 && (<Container>
+    {(loading && loading2 ) && <LoadingPage/>}
+    {(!loading && !loading2) && (<Container>
       <div className="">
         <div className="mt-5">
-            <div className="d-flex justify-content-between filter">
-              <h3>Community Projects</h3>
-              <select name="" id="" value={filter} onChange={(e)=>setFilter(e.target.value)}>
+            <div className="d-flex justify-content-between align-items-center filter gap-3 ">
+              <h3 className="fs-3">Community Projects</h3>
+              <select name="" id="" value={filter} onChange={(e)=>setFilter(e.target.value)} className=" fs-6">
               <option value="" disabled>Filter By</option>
               <option value="">All</option>
                 {communityData && communityData.map((item)=>{
@@ -128,28 +124,33 @@ formdata.append("feed_id", id);
               </select>
             </div>
             <hr />
-          
-          <section>
-            <div className="project-profile">
+            <div className="d-flex flex-column flex-md-row flex-wrap ">
               {!project.length && <h3 className="fw-bold my-5">No Project Found</h3>}
               {project && project.map(project=>
-                  <div className=" profile mt-3 mb-5 " key={project.id}>
-                  <img src={project.thumbnail? project.thumbnail: image1} alt={project.title} className="profile-image" />
-                  <div className="d-flex justify-content-between  align-items-center proile-name-con px-1">
-                    <div className="d-flex gap-2 align-items-center">
+                  <div className="col-12 col-md-6 col-lg-4 d-flex flex-column gap-2 px-md-3 pb-3 position-relative" key={project.id} style={{overflow:"hidden"}}>
+
+                    <div className="col-12 text-captionerr-con">
+                  <img src={project.thumbnail? project.thumbnail: image1} alt={project.title} className=" img-fluid rounded-4" style={{height:"300px",width:"100%"}} />
+                  </div>
+                  <div className="text-center text-captionerr">
+                    <p className="text-center fs-3 fw-bold ">{project.title}</p>
+                  </div>
+
+                  <div className="d-flex justify-content-between">
+                    <div className="d-flex gap-2 col-7">
                       <img src={project.user.image?project.user.image:userIcon} alt="" className="profile-icon rounded-circle" />
                       <p className="profile-name p-0 m-0">{truncateText(project.user.fullname, 18)}</p>
                     </div>
   
-                    <div className=" d-flex gap-5 align-items-center">
-                      <div className="d-flex align-items-center">
-                          <div className="heart333">
+                    <div className="col-3 d-flex align-items-center justify-content-between px-2">
+                      <div className="d-flex align-items-center position-relative">
+                          <div className="d-flex justify-content-center align-items-center heart333 position-absolute">
                           <Heart isClick={project.liked_by_user} onClick={()=>{handleHeartClick(project.id)}}/>
                           </div>
                         <p className="m-0">{project.total_likes}</p>
                       </div>
   
-                      <div className="d-flex align-items-center ">
+                      <div className="d-flex align-items-center gap-2">
                         <p className="d-flex fs-4 p-1 align-items-center m-0">
                           {" "}
                           <AiOutlineEye />
@@ -158,14 +159,10 @@ formdata.append("feed_id", id);
                       </div>
                     </div>
                   </div>
-                  <div className="text-center position-relative text-caption">
-                    <p className="text-center fs-3 fw-bold text-light">{project.title}</p>
-                  </div>
                 </div>
                 )}
-             
             </div>
-          </section>
+      
         </div>
       </div>
       <div className="mt-5 d-flex justify-content-center">
