@@ -22,7 +22,7 @@ const Header2 = () => {
           <Navbar.Collapse id="responsive-navbar-nav" className="g-5">
             <Nav className="m-auto p-auto">
               <Link
-                to="/dashboard"
+                to="/external-community"
                 className="text-decoration-none text-white   py-2  fw-bold mx-3 tag"
               >
                 Explore Community

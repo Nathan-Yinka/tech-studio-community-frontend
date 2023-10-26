@@ -7,8 +7,8 @@ const Banner = () => {
       <section className='inner'>
         <div>
       <h1 className='fw-bold'>Explore Community</h1>
-      <h2  className='red'>Meet the tech Innovatore who fuel Our community's growth</h2>
-          <h3> Whether you're seeking collaboration, finding talents, or simply looking <br /> to expand your network, you've come to the right place. </h3>
+      <h2  className='red d-none d-lg-block'>Meet the tech Innovatore who fuel Our community's growth</h2>
+          <h3 className='mt-5'> Whether you're seeking collaboration, finding talents, or simply looking <br /> to expand your network, you've come to the right place. </h3>
           </div>
         </section>
     </div>

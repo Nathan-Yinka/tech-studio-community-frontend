@@ -23,6 +23,7 @@ import ProjectUpload from './pages/Projectupload/ProjectUpload';
 import DefaultLayout from "./Layout/DefaultLayout";
 import InternalModal from "./pages/CommunityInternalModal/InternalModal";
 import NotificationModal from "./pages/CommunityInternalModal/NotificationModal";
+import ExternalCommunity from './pages/ExternalCommunity';
 
 function App() {
   const [jobPosterData, SetJobPosterData]= useState({})
@@ -34,9 +35,9 @@ function App() {
           <Route path='/community' element={<Community/>}/>
           <Route path='/postdetails/:id' element={<PostDetails/>}/>
           <Route path='/projectlist' element={<ProjectList/>}/>
-          <Route path='profile' element={<Profile/>}/>
+         
           <Route path='/edit' element={<Edit/>}/>
-          <Route path="/profile" element={<Profile/>} />
+          
          
           <Route path="/internalpage" element={<InternalPage />} />
           <Route path='/jobrequirement' element={<JobRequirements jobPosterData={jobPosterData}/>} />
@@ -50,11 +51,14 @@ function App() {
           <Route path='/projectupload' element={<ProjectUpload/>}/>
 
 
+
           <Route element={<DefaultLayout/>}>
             <Route path="/" element={<Home />} />
             <Route path="/talent" element={<Talent SetJobPosterData={SetJobPosterData}/>} />
+            <Route path='profile/:id' element={<Profile/>}/>
             <Route path="/internal" element={<InternalModal />} />
             <Route path="/notification" element={<NotificationModal />} />
+            <Route path='/external-community' element={<ExternalCommunity/>}/>
           </Route>
         </Routes>
   
