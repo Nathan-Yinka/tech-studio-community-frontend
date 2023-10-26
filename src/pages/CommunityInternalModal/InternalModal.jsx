@@ -7,10 +7,10 @@ import p1 from "../CommunityInternalModal/images/profileimage1.png";
 import p2 from "../CommunityInternalModal/images/profileimage2.png";
 import P3 from "../CommunityInternalModal/images/profileimage3.png";
 import profile from "../CommunityInternalModal/images/profile.png";
-import DeleteMessagemodal from "../../component/DeleteMessagemodal";
-import SaveChangesmodal from "../../component/SaveChangesmodal";
-import PublishModal from "../../component/PublishModal";
-import DeleteConfirmationmodal from "../../component/DeleteConfirmationmodal";
+import DeleteMessagemodal from "../../components/DeleteMessagemodal";
+import SaveChangesmodal from "../../components/SaveChangesmodal";
+import PublishModal from "../../components/PublishModal";
+import DeleteConfirmationmodal from "../../components/DeleteConfirmationmodal";
 const InternalModal = () => {
   const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(false);

@@ -1,6 +1,6 @@
-import Hero from "../../component/Hero";
+import Hero from "../../components/Hero";
 import { Container } from "react-bootstrap";
-import Projects from "../../component/Projects";
+import Projects from "../../components/Projects";
 
 const Home = () => {
   return (

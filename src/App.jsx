@@ -11,10 +11,10 @@ import ProjectList from './pages/ProjectList/ProjectList';
 import Profile from './pages/Profile/ProfileInternalpage';
 import Edit from './pages/editeProfile/Edit';
 import { useState } from 'react';
-import Login from './component/Login'
-import GuestSignUp from "./component/GuestSignUp"
-import PasswordReset from "./component/PasswordReset"
-import NewPassword from "./component/NewPassword"
+import Login from './components/Login'
+import GuestSignUp from "./components/GuestSignUp"
+import PasswordReset from "./components/PasswordReset"
+import NewPassword from "./components/NewPassword"
 import EmailConfirmation from "./pages/EmailConfirmation";
 import EmailResend from "./pages/EmailResend";
 import InternalPage from "./pages/InternalPage"
