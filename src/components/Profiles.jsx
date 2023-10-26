@@ -122,9 +122,9 @@ const [page,setPage] = useState(1)
             {/* <img src={prof} alt="" className=" border-0 rounded-circle" /> */}
             <img src={user.image?user.image:userIcon} alt="" className="  border-white rounded-circle" />
             <Card.Body>
-              <h2>{user.full_name}</h2>
-              <h4 className="fs-6 ">{user.community_name}</h4>
-              <h6 className=""> {user.cohort}</h6>
+              <h2 className="profile-card-name">{user.full_name}</h2>
+              <h4 className="fs-6 profile-card-community">{user.community_name}</h4>
+              <h6 className="profile-card-cohort"> {user.cohort}</h6>
               {/* <Button variant="primary">View Profile</Button> */}
             </Card.Body>
           </Card>
